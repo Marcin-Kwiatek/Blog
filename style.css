@@ -1,0 +1,67 @@
+body{
+    background-color:lightslategrey;
+}
+.container{
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.logo{
+    font-size: 40px;
+    float: left;
+    margin-right: 70px;
+    margin-bottom: 50px;
+    margin-top: 10px;
+    margin-left: 15px;
+    background-color: lightgray;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+.menu{
+    float: left;
+    margin-left: 20px;
+    font-size: 20px;
+    margin-top: 20px;
+}
+.header{
+    min-height: 60px;
+    margin-bottom: 50px;
+    margin-top: 20px;
+    background-color: lightgray;
+}
+.title{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.imgLeft{
+    margin-left: 20px;
+    padding: 20px;
+    float: left;
+    width: 500px;
+}
+.article{
+    background-color: lightgray;
+    min-height: 350px;
+    margin-bottom: 30px;
+}
+.textRight{
+    float: left;
+    width: 400px;
+    text-align: justify;
+    margin-top: 15px;
+}
+.imgRight{
+    padding: 20px;
+    float: left;
+    width: 500px;
+    margin-right: 0px;
+    margin-left: 10px;
+    text-align: right;
+}
+.textLeft{
+    float: left;
+    margin-left: 40px;
+    width: 400px;
+    text-align: justify;
+    margin-top: 15px;
+}
