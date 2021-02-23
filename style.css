@@ -77,3 +77,14 @@ body{
     cursor: pointer;
     color:white;
 }
+.contact{
+    font-size: 30px;
+    color: white;
+    text-align: center;
+}
+.contactDetails{
+    width: 400px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
