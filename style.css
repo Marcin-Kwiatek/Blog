@@ -88,3 +88,8 @@ body{
     margin-left: auto;
     margin-right: auto;
 }
+.tilelink{
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+}
