@@ -36,7 +36,7 @@ body{
 .title{
     text-align: center;
     margin-bottom: 30px;
-    background-color: lightgray;
+    color:white;
     width: 400px;
     margin-left: auto;
     margin-right: auto;
@@ -57,6 +57,7 @@ body{
     width: 400px;
     text-align: justify;
     margin-top: 15px;
+    min-height: 300px;
 }
 .imgRight{
     padding: 20px;
@@ -72,6 +73,7 @@ body{
     width: 400px;
     text-align: justify;
     margin-top: 15px;
+    min-height: 300px;
 }
 .more:hover{
     cursor: pointer;
@@ -92,4 +94,24 @@ body{
     color: black;
     cursor: pointer;
     text-decoration: none;
+}
+.dataAuthor{
+    float: left;
+    font-size: 50px;
+    min-height: 300px;
+    width: 600px;
+    text-align: center;
+    background-color: lightgray;
+    padding-top: 50px;
+}
+.author{
+    float: left;
+    width: 400px;
+    min-height: 330px;
+    background-color: lightgray;
+    padding-top: 20px;
+}
+.textDiet{
+    font-size: 30px;
+    text-align: justify;
 }
