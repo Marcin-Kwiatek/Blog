@@ -115,3 +115,15 @@ body{
     font-size: 30px;
     text-align: justify;
 }
+.addPostButton{
+    width: 50%;
+    min-height: 80px;
+    text-align: center;
+    cursor: pointer;
+    color: #5e6c84;
+    font-size: 40px;
+}
+.addPostButton:hover
+{
+    color: #4d5b73;
+}
