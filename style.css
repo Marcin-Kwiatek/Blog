@@ -116,7 +116,7 @@ body{
     text-align: justify;
 }
 .addPostButton{
-    width: 50%;
+    width: 35%;
     min-height: 80px;
     text-align: center;
     cursor: pointer;
@@ -126,4 +126,30 @@ body{
 .addPostButton:hover
 {
     color: #4d5b73;
+}
+.postBlog
+{
+    width: 1000px;
+    min-height: 500px;
+    background-color: lightgray;
+    margin-bottom: 30px;
+}
+.addTitle{
+    width: 560px;
+    min-height: 36px;
+    margin: 10px;
+}
+.addContent{
+    width: 900px;
+    min-height: 300px;
+    margin: 10px;
+}
+.publish{
+    cursor: pointer;
+    width: 150px;
+    min-height: 50px;
+    margin-left: 800px;
+    background-color: blue;
+    color: white;
+    margin-top: 30px;
 }
