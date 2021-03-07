@@ -9,7 +9,7 @@ function addPost() {
         `<div class="postBlog" id="addPost">
             <textarea class="addTitle" id="addTitle" placeholder="Wpisz tytuł postu"></textarea>
             <textarea class="addContent" id="addContent" placeholder="Wpisz treść postu"></textarea>
-            <button class="publish" id="publish">Opublikuj</button>
+            <button class="publish" id="publish"> Opublikuj</button>
         </div>`)
     let addPostButton = document.getElementById("addPostButton")
     addPostButton.remove()
@@ -22,5 +22,5 @@ function publishPost() {
    localStorage.setItem('title'+id, addTitle)
    let addContent = document.getElementById("addContent").value
    localStorage.setItem('content'+id, addContent)
-
+   window.location.href = "article.html"
 }
