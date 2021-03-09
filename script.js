@@ -23,6 +23,6 @@ function publishPost() {
     let addContent = document.getElementById("addContent").value
     localStorage.setItem('content' + id, addContent)
     if (addTitle !== "" && addContent !== "") {
-        window.location.href = "article.html"
+        window.location.href = "article.html?nr="+id
     }
 }
