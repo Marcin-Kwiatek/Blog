@@ -17,10 +17,12 @@ function addPost() {
     publish.addEventListener("click", function () { publishPost() })
 }
 function publishPost() {
-   let addTitle = document.getElementById("addTitle").value
-   let id = Math.random()
-   localStorage.setItem('title'+id, addTitle)
-   let addContent = document.getElementById("addContent").value
-   localStorage.setItem('content'+id, addContent)
-   window.location.href = "article.html"
+    let addTitle = document.getElementById("addTitle").value
+    let id = Math.random()
+    localStorage.setItem('title' + id, addTitle)
+    let addContent = document.getElementById("addContent").value
+    localStorage.setItem('content' + id, addContent)
+    if (addTitle !== "" && addContent !== "") {
+        window.location.href = "article.html"
+    }
 }
