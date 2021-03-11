@@ -11,6 +11,7 @@ function addPost() {
             <textarea class="addContent" id="addContent" placeholder="Wpisz treść postu"></textarea>
             <button class="publish" id="publish"> Opublikuj</button>
         </div>`)
+    
     let addPostButton = document.getElementById("addPostButton")
     addPostButton.remove()
     let publish = document.getElementById("publish")
