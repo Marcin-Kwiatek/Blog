@@ -1,12 +1,14 @@
-body{
-    background-color:lightslategrey;
+body {
+    background-color: lightslategrey;
 }
-.container{
+
+.container {
     width: 1000px;
     margin-left: auto;
     margin-right: auto;
 }
-.logo{
+
+.logo {
     font-size: 40px;
     float: left;
     margin-right: 40px;
@@ -17,50 +19,58 @@ body{
     letter-spacing: 2px;
     font-weight: 700;
 }
-.menu{
+
+.menu {
     float: left;
     margin-left: 20px;
     font-size: 20px;
     margin-top: 20px;
 }
-.menu:hover{
+
+.menu:hover {
     color: white;
     cursor: pointer;
 }
-.header{
+
+.header {
     min-height: 60px;
     margin-bottom: 50px;
     margin-top: 20px;
     background-color: lightgray;
 }
-.title{
+
+.title {
     text-align: center;
     margin-bottom: 30px;
-    color:white;
+    color: white;
     width: 400px;
     margin-left: auto;
     margin-right: auto;
     text-transform: uppercase;
 }
-.imgLeft{
+
+.imgLeft {
     margin-left: 20px;
     padding: 20px;
     float: left;
     width: 500px;
 }
-.article{
+
+.article {
     background-color: lightgray;
     min-height: 350px;
     margin-bottom: 30px;
 }
-.textRight{
+
+.textRight {
     float: left;
     width: 400px;
     text-align: justify;
     margin-top: 15px;
     min-height: 300px;
 }
-.imgRight{
+
+.imgRight {
     padding: 20px;
     float: left;
     width: 500px;
@@ -68,7 +78,8 @@ body{
     margin-left: 10px;
     text-align: right;
 }
-.textLeft{
+
+.textLeft {
     float: left;
     margin-left: 40px;
     width: 400px;
@@ -76,27 +87,32 @@ body{
     margin-top: 15px;
     min-height: 300px;
 }
-.more:hover{
+
+.more:hover {
     cursor: pointer;
-    color:white;
+    color: white;
 }
-.contact{
+
+.contact {
     font-size: 30px;
     color: white;
     text-align: center;
 }
-.contactDetails{
+
+.contactDetails {
     width: 400px;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
 }
-.tilelink{
+
+.tilelink {
     color: black;
     cursor: pointer;
     text-decoration: none;
 }
-.dataAuthor{
+
+.dataAuthor {
     float: left;
     font-size: 50px;
     min-height: 300px;
@@ -105,17 +121,20 @@ body{
     background-color: lightgray;
     padding-top: 50px;
 }
-.author{
+
+.author {
     float: left;
     width: 400px;
     min-height: 330px;
     background-color: lightgray;
     padding-top: 20px;
 }
-.textDiet{
+
+.textDiet {
     text-align: justify;
 }
-.addPostButton{
+
+.addPostButton {
     width: 35%;
     min-height: 80px;
     text-align: center;
@@ -123,28 +142,31 @@ body{
     color: #5e6c84;
     font-size: 40px;
 }
-.addPostButton:hover
-{
+
+.addPostButton:hover {
     color: #4d5b73;
 }
-.postBlog
-{
+
+.postBlog {
     width: 1000px;
     min-height: 500px;
     background-color: lightgray;
     margin-bottom: 30px;
 }
-.addTitle{
+
+.addTitle {
     width: 560px;
     min-height: 36px;
     margin: 10px;
 }
-.addContent{
+
+.addContent {
     width: 900px;
     min-height: 300px;
     margin: 10px;
 }
-.publish{
+
+.publish {
     cursor: pointer;
     width: 150px;
     min-height: 50px;
@@ -152,4 +174,25 @@ body{
     background-color: blue;
     color: white;
     margin-top: 30px;
+}
+
+.divTitle {
+    width: 100%;
+    min-height: 50px;
+    font-size: 36px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-right: auto;
+}
+
+.divContent {
+    width: 100%;
+    background-color: lightgray;
+    color: black;
+    padding: 10px;
+    font-size: 22px;
+    margin-bottom: 20px;
+    text-align: justify;
 }
