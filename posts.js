@@ -1,5 +1,10 @@
   window.addEventListener('DOMContentLoaded', (event) => {
-      let titleArr = []
+      fetch('http://localhost:5000/allArticles')
+          .then(function(response) { return response.json() })
+          .then(function(data) { console.log(data) })
+
+
+      /*let titleArr = []
       for (let i = 0; i < localStorage.length; i++) {
           let key = localStorage.key(i)
           if (key.startsWith("title")) {
@@ -16,5 +21,5 @@
           divContent.classList.add("divContent")
           document.getElementById("title").appendChild(divTitle)
           document.getElementById("title").appendChild(divContent)
-      }
+      }*/
   })
