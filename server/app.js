@@ -2,6 +2,7 @@ const express = require('express')
 const app = express()
 const cors = require('cors')
 const dotenv = require('dotenv')
+const dbService = require('./dbService')
 
 dotenv.config()
 
@@ -14,9 +15,14 @@ app.post('/article', function(request, response) {
 })
 
 app.get('/allArticles', function(request, response) {
-    response.json({
-        success: true
-    })
+    const db = dbService.getDbServiceInstance()
+    const result = db.getAllArticles()
+    result
+        .then(data => {
+            console.log(data)
+            response.json({ data: data })
+        })
+        .catch(err => console.log(err))
 })
 
 app.listen(process.env.PORT, function() { console.log('app is running') })
