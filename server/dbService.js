@@ -37,6 +37,23 @@ class DbService {
             console.log(error)
         }
     }
+    async insertArticle(article) {
+        try {
+            const responseAddArticle = await new Promise((resolve, reject) => {
+                const queryAddArticle = "INSERT INTO posts (id, title, content, date) " +
+                    `VALUES ('` + article.id + `','` + article.title + `','` + article.content + `',` + article.date + ` )`
+                console.log(queryAddArticle)
+                connection.query(queryAddArticle, (err, results) => {
+                    if (err) reject(new Error(err.message))
+                    resolve(results)
+
+                })
+            })
+            return responseAddArticle
+        } catch (error) {
+            console.log(error)
+        }
+    }
 }
 
 module.exports = DbService

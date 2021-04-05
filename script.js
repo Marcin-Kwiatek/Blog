@@ -28,6 +28,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
         let addTitle = document.getElementById("addTitle").value
         let idPost = Math.random()
         let addContent = document.getElementById("addContent").value
+        var today = new Date();
+        var dd = String(today.getDate()).padStart(2, '0');
+        var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+        var yyyy = today.getFullYear();
+
+        today = yyyy + '-' + mm + '-' + dd;
 
         if (addTitle !== "" && addContent !== "") {
             fetch('http://localhost:5000/article', {
@@ -35,9 +41,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
                     headers: {
                         'Content-Type': 'application/json'
                     },
-                    body: JSON.stringify({ id: idPost, title: addTitle, content: addContent })
+                    body: JSON.stringify({ id: idPost, title: addTitle, content: addContent, date: today })
                 })
-                //  .then(function() { window.location.href = "article.html?nr=" + idPost })
+                .then(function() { window.location.href = "article.html?nr=" + idPost })
         }
 
     }

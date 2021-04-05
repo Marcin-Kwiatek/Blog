@@ -12,6 +12,8 @@ app.use(express.urlencoded({ extended: false }))
 
 app.post('/article', function(request, response) {
     console.log(request.body)
+    const db = dbService.getDbServiceInstance()
+    const result = db.insertArticle(request.body, )
     response.json({ status: 200, })
 })
 
@@ -20,7 +22,6 @@ app.get('/allArticles', function(request, response) {
     const result = db.getAllArticles()
     result
         .then(data => {
-            console.log(data)
             response.json({ data: data })
         })
         .catch(err => console.log(err))
