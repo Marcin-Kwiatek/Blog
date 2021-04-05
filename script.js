@@ -26,14 +26,18 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     function publishPost() {
         let addTitle = document.getElementById("addTitle").value
-        let id = Math.random()
+        let idPost = Math.random()
         let addContent = document.getElementById("addContent").value
 
         if (addTitle !== "" && addContent !== "") {
             fetch('http://localhost:5000/article', {
-                    method: 'POST'
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ id: idPost, title: addTitle, content: addContent })
                 })
-                .then(function() { window.location.href = "article.html?nr=" + id })
+                //  .then(function() { window.location.href = "article.html?nr=" + idPost })
         }
 
     }

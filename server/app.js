@@ -11,7 +11,8 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
 app.post('/article', function(request, response) {
-    response.json({ status: 200 })
+    console.log(request.body)
+    response.json({ status: 200, })
 })
 
 app.get('/allArticles', function(request, response) {
