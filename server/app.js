@@ -27,4 +27,16 @@ app.get('/allArticles', function(request, response) {
         .catch(err => console.log(err))
 })
 
+app.get('/article', function(request, response) {
+    let id = request.query.id
+    const db = dbService.getDbServiceInstance()
+    const result = db.getArticle(id)
+    result
+        .then(data => {
+            response.json({ data: data })
+        })
+        .catch(err => console.log(err))
+})
+
+
 app.listen(process.env.PORT, function() { console.log('app is running') })

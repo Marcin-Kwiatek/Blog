@@ -54,6 +54,22 @@ class DbService {
             console.log(error)
         }
     }
+    async getArticle(idArticle) {
+        try {
+            const responseAddArticle = await new Promise((resolve, reject) => {
+                const queryAddArticle = "SELECT * FROM posts WHERE id =" + idArticle;
+                console.log(queryAddArticle)
+                connection.query(queryAddArticle, (err, results) => {
+                    if (err) reject(new Error(err.message))
+                    resolve(results[0])
+
+                })
+            })
+            return responseAddArticle
+        } catch (error) {
+            console.log(error)
+        }
+    }
 }
 
 module.exports = DbService

@@ -1,9 +1,3 @@
-window.addEventListener('DOMContentLoaded', (event) => {
-    fetch('http://localhost:5000/article', {
-        method: 'POST'
-    })
-
-
     let postButton = document.getElementById("addPostButton")
 
     postButton.addEventListener("click", function() { addPost() })
@@ -30,7 +24,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         let addContent = document.getElementById("addContent").value
         var today = new Date();
         var dd = String(today.getDate()).padStart(2, '0');
-        var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+        var mm = String(today.getMonth() + 1).padStart(2, '0');
         var yyyy = today.getFullYear();
 
         today = yyyy + '-' + mm + '-' + dd;
@@ -47,4 +41,3 @@ window.addEventListener('DOMContentLoaded', (event) => {
         }
 
     }
-})

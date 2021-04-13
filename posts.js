@@ -2,7 +2,6 @@
       fetch('http://localhost:5000/allArticles')
           .then(function(response) { return response.json() })
           .then(function(data) {
-              console.log(data.data.length)
               for (let i = 0; i < data.data.length; i++) {
                   let divTitle = document.createElement("div")
                   divTitle.innerHTML = data.data[i].title
