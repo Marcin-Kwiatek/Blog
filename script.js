@@ -35,7 +35,7 @@
                     headers: {
                         'Content-Type': 'application/json'
                     },
-                    body: JSON.stringify({ id: idPost, title: addTitle, content: addContent, date: today })
+                    body: JSON.stringify({ id: idPost, title: addTitle, content: addContent, date: "'" + today + "'" })
                 })
                 .then(function() { window.location.href = "article.html?nr=" + idPost })
         }
