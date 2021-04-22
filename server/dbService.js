@@ -23,10 +23,10 @@ class DbService {
     static getDbServiceInstance() {
         return instance ? instance : new DbService()
     }
-    async getAllArticles() {
+    async getAllArticles(pageNumber) {
         try {
             const response = await new Promise((resolve, reject) => {
-                const query = "SELECT * FROM posts;"
+                const query = "SELECT * FROM posts ORDER BY date DESC LIMIT " + (pageNumber - 1) * 3 + ",3;"
                 connection.query(query, (err, results) => {
                     if (err) reject(new Error(err.message))
                     resolve(results)

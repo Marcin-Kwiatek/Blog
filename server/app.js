@@ -18,8 +18,9 @@ app.post('/article', function(request, response) {
 })
 
 app.get('/allArticles', function(request, response) {
+    let pageNumber = request.query.pageNumber
     const db = dbService.getDbServiceInstance()
-    const result = db.getAllArticles()
+    const result = db.getAllArticles(pageNumber)
     result
         .then(data => {
             response.json({ data: data })

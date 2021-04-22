@@ -196,3 +196,10 @@ body {
     margin-bottom: 20px;
     text-align: justify;
 }
+
+.pageNumber {
+    float: left;
+    margin-left: 10px;
+    font-size: 30px;
+    margin-top: 50px;
+}
