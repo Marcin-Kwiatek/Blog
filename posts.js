@@ -28,12 +28,9 @@
                       divPage.innerHTML = k
                       divPage.classList.add("pageNumber")
                       document.getElementById("pages").appendChild(divPage)
+                      divPage.addEventListener("click", function() { showArticles(k) })
                   }
               })
       }
       getArticlesLength()
-      let pageNumbers = document.getElementsByClassName("pageNumber")
-      for (let j = 0; j < pageNumbers.length; j++) {
-          pageNumbers[j].addEventListener("click", function() { showArticles(j + 1) })
-      }
   })
