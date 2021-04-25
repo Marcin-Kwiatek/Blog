@@ -70,6 +70,20 @@ class DbService {
             console.log(error)
         }
     }
+    async getArticlesCount() {
+        try {
+            const response = await new Promise((resolve, reject) => {
+                const query = "SELECT count(*) FROM posts"
+                connection.query(query, (err, results) => {
+                    if (err) reject(new Error(err.message))
+                    resolve(results[0]["count(*)"])
+                })
+            })
+            return response
+        } catch (error) {
+            console.log(error)
+        }
+    }
 }
 
 module.exports = DbService

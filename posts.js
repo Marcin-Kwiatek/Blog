@@ -19,6 +19,14 @@
       }
       showArticles(1)
 
+      function getArticlesLength() {
+          fetch('http://localhost:5000/articlesCount')
+              .then(function(response) { return response.json() })
+              .then(function(data) {
+                  console.log(data.data)
+              })
+      }
+      getArticlesLength()
       let pageNumbers = document.getElementsByClassName("pageNumber")
       for (let j = 0; j < pageNumbers.length; j++) {
           pageNumbers[j].addEventListener("click", function() { showArticles(j + 1) })
