@@ -23,7 +23,12 @@
           fetch('http://localhost:5000/articlesCount')
               .then(function(response) { return response.json() })
               .then(function(data) {
-                  console.log(Math.ceil(data.data / 3))
+                  for (let k = 1; k <= Math.ceil(data.data / 3); k++) {
+                      let divPage = document.createElement("div")
+                      divPage.innerHTML = k
+                      divPage.classList.add("pageNumber")
+                      document.getElementById("pages").appendChild(divPage)
+                  }
               })
       }
       getArticlesLength()
