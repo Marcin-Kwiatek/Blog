@@ -23,7 +23,7 @@
           fetch('http://localhost:5000/articlesCount')
               .then(function(response) { return response.json() })
               .then(function(data) {
-                  console.log(data.data)
+                  console.log(Math.ceil(data.data / 3))
               })
       }
       getArticlesLength()
