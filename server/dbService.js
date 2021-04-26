@@ -26,7 +26,7 @@ class DbService {
     async getAllArticles(pageNumber) {
         try {
             const response = await new Promise((resolve, reject) => {
-                const query = "SELECT * FROM posts ORDER BY date DESC LIMIT " + (pageNumber - 1) * 3 + ",3;"
+                const query = "SELECT * FROM posts ORDER BY date DESC LIMIT " + (pageNumber - 1) * 3 + ",3"
                 connection.query(query, (err, results) => {
                     if (err) reject(new Error(err.message))
                     resolve(results)
@@ -57,7 +57,7 @@ class DbService {
     async getArticle(idArticle) {
         try {
             const responseAddArticle = await new Promise((resolve, reject) => {
-                const queryAddArticle = "SELECT * FROM posts WHERE id =" + idArticle;
+                const queryAddArticle = "SELECT * FROM posts WHERE id =" + idArticle
                 console.log(queryAddArticle)
                 connection.query(queryAddArticle, (err, results) => {
                     if (err) reject(new Error(err.message))
@@ -77,6 +77,21 @@ class DbService {
                 connection.query(query, (err, results) => {
                     if (err) reject(new Error(err.message))
                     resolve(results[0]["count(*)"])
+                })
+            })
+            return response
+        } catch (error) {
+            console.log(error)
+        }
+    }
+    async deleteArticle(idDeleteArticle) {
+        try {
+            const response = await new Promise((resolve, reject) => {
+                const query = "DELETE FROM posts WHERE ID = " + idDeleteArticle
+                console.log(query)
+                connection.query(query, (err, results) => {
+                    if (err) reject(new Error(err.message))
+                    resolve(results)
                 })
             })
             return response

@@ -11,7 +11,6 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
 app.post('/article', function(request, response) {
-    console.log(request.body)
     const db = dbService.getDbServiceInstance()
     const result = db.insertArticle(request.body, )
     response.json({ status: 200, })
@@ -47,6 +46,15 @@ app.get('/articlesCount', function(request, response) {
         })
         .catch(err => console.log(err))
 })
-
+app.delete('/deleteArticle', function(request, response) {
+    let idDeleteArticle = request.query.id
+    const db = dbService.getDbServiceInstance()
+    const result = db.deleteArticle(idDeleteArticle)
+    result
+        .then(data => {
+            response.json({ data: data })
+        })
+        .catch(err => console.log(err))
+})
 
 app.listen(process.env.PORT, function() { console.log('app is running') })
