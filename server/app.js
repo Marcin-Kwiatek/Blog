@@ -56,5 +56,10 @@ app.delete('/deleteArticle', function(request, response) {
         })
         .catch(err => console.log(err))
 })
+app.patch('/updateArticle', function(request, response) {
+    const db = dbService.getDbServiceInstance()
+    const result = db.updateArticle(request.body, )
+    response.json({ status: 200, })
+})
 
 app.listen(process.env.PORT, function() { console.log('app is running') })

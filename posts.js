@@ -44,7 +44,36 @@
           editedArticle.classList.add("addTitle")
           document.getElementById("edit-" + id).appendChild(editedArticle)
           let editArticleButton = document.getElementById("edit-" + id)
-          editArticleButton.innerHTML = "Zatwierdź zmiany"
+          editArticleButton.remove()
+          let deleteArticleButton = document.getElementById("delete-" + id)
+          deleteArticleButton.remove()
+
+          let title = document.getElementById("title")
+          title.insertAdjacentHTML('beforebegin',
+              `<div class="postBlog" id="updatePost">
+            <textarea class="addTitle" id="updateTitle" placeholder="Wpisz tytuł postu"></textarea>
+            <textarea class="addContent" id="updateContent" placeholder="Wpisz treść postu"></textarea>
+            <button class="publish" id="updateButton"> Zatwierdź zmiany</button>
+        </div>`)
+          let update = document.getElementById("updateButton")
+          update.addEventListener("click", function() { updatePost(id) })
+      }
+
+      function updatePost(idUpdate) {
+          let updateTitle = document.getElementById("updateTitle").value
+          let updateContent = document.getElementById("updateContent").value
+          if (updateTitle !== "" && updateContent !== "") {
+              fetch('http://localhost:5000/updateArticle', {
+                      method: 'PATCH',
+                      headers: {
+                          'Content-Type': 'application/json'
+                      },
+                      body: JSON.stringify({ id: idUpdate, title: updateTitle, content: updateContent })
+                  })
+                  .then(function(response) { return response.json() })
+                  .then(function(data) {})
+              location.reload()
+          }
       }
 
       function deleteArticle(id) {

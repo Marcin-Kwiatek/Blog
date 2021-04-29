@@ -99,6 +99,22 @@ class DbService {
             console.log(error)
         }
     }
+    async updateArticle(update) {
+        try {
+            console.log(update)
+            const response = await new Promise((resolve, reject) => {
+                const query = "UPDATE posts SET title=" + update.title + ",content=" + update.content + " WHERE ID = " + update.id
+                console.log(query)
+                connection.query(query, (err, results) => {
+                    if (err) reject(new Error(err.message))
+                    resolve(results)
+                })
+            })
+            return response
+        } catch (error) {
+            console.log(error)
+        }
+    }
 }
 
 module.exports = DbService
